@@ -85,11 +85,11 @@ class AppSession: ObservableObject  {
     func addUserFromQrScan(_ result: String) {
         do {
             try ScanHandler.retrieve(result: result, context: context)
-            showBanner(.init(title: "User added", message: "All good! The user has been added.", kind: .success))
+            showBanner(.init(title: "联系人已成功添加！", message: "太棒了，对方的联系人已经添加！请让对方添加你的。", kind: .success))
         } catch ScanHandler.ScanHandlerError.userPreviouslyAdded {
-            showBanner(.init(title: "Oops", message: "The user has been added ", kind: .normal))
+            showBanner(.init(title: "啊..抱歉", message: "此用户已被添加。", kind: .normal))
         } catch ScanHandler.ScanHandlerError.invalidFormat {
-            showBanner(.init(title: "Oops", message: "The scanned QR code does not look correct.", kind: .error))
+            showBanner(.init(title: "啊..抱歉", message: "他的二维码似乎并不是正确的。", kind: .error))
         } catch {
             showErrorMessage(error.localizedDescription)
         }
@@ -125,8 +125,8 @@ class AppSession: ObservableObject  {
                 text: message)
         } catch DataControllerError.noConnectedDevices {
             showBanner(.init(
-                title: "Message in queue",
-                message: "There are currently no connected devices. The message will be delivered later.",
+                title: "消息阵列",
+                message: "目前没有连接的设备，请稍后发送消息。",
                 kind: .normal))
             return
         } catch {
@@ -144,7 +144,7 @@ class AppSession: ObservableObject  {
         localMessage.id = messageToBeStored.id
         localMessage.sender = messageToBeStored.sender
         
-        conversation.lastMessage = "You: " + messageToBeStored.text
+        conversation.lastMessage = "你: " + messageToBeStored.text
         conversation.date = Date()
         conversation.addToMessages(localMessage)
         
@@ -169,11 +169,11 @@ class AppSession: ObservableObject  {
             fatalError("Tried to send read messages before username was set.")
         }
         guard let receiver = conversation.author else {
-            showBanner(.init(title: "Oops", message: "Could not find contact and thus not send read message.", kind: .normal))
+            showBanner(.init(title: "啊..抱歉", message: "找不到对方联系人，因此无法发送已读状态的消息。", kind: .normal))
             return
         }
         guard let messageEntities = conversation.messages?.allObjects as? [MessageEntity] else {
-            showBanner(.init(title: "Oops", message: "No messages found in this conversation.", kind: .normal))
+            showBanner(.init(title: "啊..抱歉", message: "此会话中找不到信息。", kind: .normal))
             return
         }
         
@@ -224,7 +224,7 @@ extension AppSession {
                     conversation: conversation)
 
                 guard let usernameWithDigits = UsernameValidator.shared.userInfo?.asString else {
-                    self.showErrorMessage("Could not find your current username.")
+                    self.showErrorMessage("找不到你当前用户名。")
                     return
                 }
 
@@ -257,7 +257,7 @@ extension AppSession {
                     self.sendNotificationWith(text: localMessage.text, from: localMessage.sender)
                 }
             } catch {
-                self.showErrorMessage("Could not save newly received message.")
+                self.showErrorMessage("无法保存新收到的消息。")
             }
         }
     }
@@ -334,11 +334,11 @@ extension AppSession {
     
     private func sendAcknowledgement(of message: MessageEntity) async {
         guard let usernameWithDigits = UsernameValidator.shared.userInfo?.asString else {
-            fatalError("ACK sent but username has not been set. This is not allowed.")
+            fatalError("ACK已发送，但是没有设置用户名，这是不允许的。")
         }
         
         guard let receiver = message.sender else {
-            fatalError("Cannot send ACK when there is no receiver. This is not allowed.")
+            fatalError("没有接收方时无法发送 ACK。这是不允许的。")
         }
         
         let ackText = "\(Message.Kind.acknowledgement.asString)/\(message.id)"
@@ -397,7 +397,7 @@ extension AppSession {
         if let conversation {
             return conversation
         } else {
-            self.showErrorMessage("Received a message for you, but the sender has not been added as a contact.")
+            self.showErrorMessage("收到一条消息，但发件人尚未添加为联系人。")
             return nil
         }
     }
