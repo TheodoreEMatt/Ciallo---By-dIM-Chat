@@ -15,11 +15,7 @@ dIM 可以在没有互联网连接的情况下工作，通过蓝牙发送和接�
 
 dIM项目的原始图标。(见上)
 
-
-
-
-
-![icon]([./images/NEWICON25%.png ](https://github.com/TheodoreEMatt/CialloChat-By-dIM/blob/main/images/NEWICON25%25.png)"dIM")
+![icon](./images/NEWICON25%.png "dIM")
 
 本复刻项目的新图标。（暂未计划更改，见上）
 
