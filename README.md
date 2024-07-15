@@ -38,7 +38,7 @@ dIM 可以在没有互联网连接的情况下工作，通过蓝牙发送和接�
 
 若要添加新资产，只需将他们添加到 `assets.xcassets` 文件中并运行 `> swiftgen`. 其类型安全资产将位于 `Assets+Generated.swift`中。
 
-*注意，翻译并不准确，请勿参考原项目。
+*注意，翻译并不准确，请参考原项目。
 
 ### 构建教程
 打开项目，并到 `Product -> Build Documentation`. 这会创建一个DocC归档供你浏览。
