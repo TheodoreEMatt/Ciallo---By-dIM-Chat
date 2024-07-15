@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B05E1F3126D3B3A800AD9E65"
-               BuildableName = "Ciallo.app"
+               BuildableName = "Ciallo Chat.app"
                BlueprintName = "Ciallo"
                ReferencedContainer = "container:Ciallo.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B05E1F3126D3B3A800AD9E65"
-            BuildableName = "Ciallo.app"
+            BuildableName = "Ciallo Chat.app"
             BlueprintName = "Ciallo"
             ReferencedContainer = "container:Ciallo.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B05E1F3126D3B3A800AD9E65"
-            BuildableName = "Ciallo.app"
+            BuildableName = "Ciallo Chat.app"
             BlueprintName = "Ciallo"
             ReferencedContainer = "container:Ciallo.xcodeproj">
          </BuildableReference>

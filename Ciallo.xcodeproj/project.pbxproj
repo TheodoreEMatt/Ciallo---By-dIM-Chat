@@ -542,7 +542,7 @@
 				CFBundleDisplayName = "$(INFOPLIST_KEY_CFBundleDisplayName)";
 				CODE_SIGN_ENTITLEMENTS = dIM/dIM.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"dIM/Preview Content\"";
 				DEVELOPMENT_TEAM = MC58W4Z7C6;
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
@@ -556,7 +556,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.0;
+				MARKETING_VERSION = 3.0.1CH;
 				PRODUCT_BUNDLE_IDENTIFIER = com.matt.ciallochat;
 				PRODUCT_NAME = "Ciallo Chat";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -576,7 +576,7 @@
 				CFBundleDisplayName = "$(INFOPLIST_KEY_CFBundleDisplayName)";
 				CODE_SIGN_ENTITLEMENTS = dIM/dIM.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"dIM/Preview Content\"";
 				DEVELOPMENT_TEAM = MC58W4Z7C6;
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
@@ -590,7 +590,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.0;
+				MARKETING_VERSION = 3.0.1CH;
 				PRODUCT_BUNDLE_IDENTIFIER = com.matt.ciallochat;
 				PRODUCT_NAME = "Ciallo Chat";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
