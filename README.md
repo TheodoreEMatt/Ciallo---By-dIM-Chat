@@ -18,7 +18,9 @@ dIM项目的原始图标。(见上)
 ![icon](./images/TINYICON.png "dIM")
 
 本复刻项目的新图标。（暂未计划更改，见上）
+
 *本图标设计借用Pixiv作者「椿叶花椒」的插图。在此表示由衷的感谢。
+
 *原插画地址：https://www.pixiv.net/artworks/103170929
 
 ### 平台兼容性
