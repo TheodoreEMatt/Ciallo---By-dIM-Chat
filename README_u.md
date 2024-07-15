@@ -1,3 +1,4 @@
+*此文件不再做出其余更改，将维持此版本不再维护。
 简体中文版(ZH_HANS):(https://github.com/TheodoreEMatt/Ciallo---By-dIM-Chat/blob/main/READMEzh_cn.md).
 # Decentralized Instant Messenger (dIM) 
 dIM is an open-source instant messenger built first and foremost for iOS. It will also run on iPad but support is limited.
