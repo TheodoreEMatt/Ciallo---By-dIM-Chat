@@ -19,7 +19,7 @@ dIM项目的原始图标。(见上)
 
 
 
-![icon](./images/NEWICON25%.png "Ciallo")
+![icon](./images/NEWICON25%.png "dIM")
 
 本复刻项目的新图标。（暂未计划更改，见上）
 
