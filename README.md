@@ -7,10 +7,24 @@
 dIM 是一个开源的即时通讯工具，专为 iOS 设计。虽然也可以在 iPad 上运行，但并不能很好的运行。
 dIM 可以在没有互联网连接的情况下工作，通过蓝牙发送和接收消息。为了达到最佳效果，需附近有其他 dIM 用户。更多信息请见这里： [can be found here](https://www.dimchat.org). (来自dIM的官方网页)。
 
+
+
+
+
 ![icon](./images/icon.png "dIM")
 
+dIM项目的原始图标。(见上)
+
+
+
+
+
+![icon](./images/NEWICON25%.png "Ciallo")
+
+本复刻项目的新图标。（暂未计划更改，见上）
+
 ### 平台兼容性
-- iOS 16.0*
+- iOS 16.0 (或以上)
 - iPadOS 16.0* (可能会有问题)
 - MacOS (通过 Catalyst)
 
