@@ -1,7 +1,7 @@
-
+简体中文版(ZH_HANS):(https://github.com/TheodoreEMatt/Ciallo---By-dIM-Chat/blob/main/READMEzh_cn.md).
 # Decentralized Instant Messenger (dIM) 
 dIM is an open-source instant messenger built first and foremost for iOS. It will also run on iPad but support is limited.
-It works without an internet connection and messages are sent and received through Bluetooth. For it to work optimally it will require other dIM users nearby. More information [can be found here](https://www.dimchat.org). 
+It works without an internet connection 和 messages are sent 和 received through Bluetooth. For it to work optimally it will require other dIM users nearby. More information [can be found here](https://www.dimchat.org). 
 
 ![icon](./images/icon.png "dIM")
 
@@ -11,10 +11,10 @@ It works without an internet connection and messages are sent and received throu
 - MacOS (through Catalyst)
 
 ### Feature overview
-- Send and receive messages to contacts
+- Send 和 receive messages to contacts
 - Add contacts by scanning their QR-code with the camera or in the app
 - Encrypt all messages sent with private-key encryption
-- Delete messages and message threads
+- Delete messages 和 message threads
 - Change username
 
 ### Future ideas 
