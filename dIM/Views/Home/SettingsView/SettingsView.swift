@@ -78,24 +78,24 @@ struct SettingsView: View {
                 }
                 .foregroundColor(.accentColor)
             } header: {
-                Text("My Username")
+                Text("用户名")
             } footer: {
-                Text("If you change your username, you and your contacts will have to add each other again.")
+                Text("若更改自己的用户名，将失去联系人并需要重新添加联系人。")
             }
             
             Section {
                 Toggle(isOn: $readStatusToggle) {
-                    Label("Show Read Receipts", systemImage: "eye.fill")
+                    Label("显示已读反馈", systemImage: "eye.fill")
                         .imageScale(.large)
                 }
                 .toggleStyle(SwitchToggleStyle(tint: .accentColor))
             } footer: {
-                Text("Read receips allow your contacts to see if you have read their messages.")
+                Text("已读回执允许您的联系人查看您是否已阅读他们的消息。")
             }
             
             Section {
                 NavigationLink(destination: AboutView()) {
-                    Label("About & Contact", systemImage: "questionmark")
+                    Label("关于Ciallo Chat", systemImage: "questionmark")
                         .foregroundColor(.accentColor)
                         .imageScale(.large)
                 }
@@ -103,22 +103,22 @@ struct SettingsView: View {
             
             Section {
                 Label(
-                    appSession.connectedDevicesAmount < 0 ? "No devices connected." : "\(appSession.connectedDevicesAmount) devices connected.",
+                    appSession.connectedDevicesAmount < 0 ? "No devices connected." : "\(appSession.connectedDevicesAmount) 个设备连接",
                     systemImage: "ipad.and.iphone")
                     .imageScale(.large)
                 
-                Label("\(appSession.routedCounter) messages routed in this session.", systemImage: "arrow.left.arrow.right")
+                Label("\(appSession.routedCounter) 个在此次会话中收到的消息", systemImage: "arrow.left.arrow.right")
                     .imageScale(.large)
             } header: {
-                Text("Connectivity")
+                Text("无线连接状态")
             } footer: {
-                Text("Information about connected devices and amount of messages routed through your phone.")
+                Text("已经与你手机形成端对端网络的设备详情。")
             }
         }
         .symbolRenderingMode(.hierarchical)
         .autocapitalization(.none)
         .disableAutocorrection(true)
-        .navigationBarTitle("Settings", displayMode: .large)
+        .navigationBarTitle("设置", displayMode: .large)
         .onAppear {
             setUsernameTextFieldToStoredValue()
         }
@@ -132,8 +132,8 @@ struct SettingsView: View {
             Text(invalidUsernameAlertMessage)
         }
         // Change username alert
-        .alert("Change username", isPresented: $changeUsernameAlertMessageIsShown) {
-            Button("Change", role: .destructive) {
+        .alert("更改用户名提示", isPresented: $changeUsernameAlertMessageIsShown) {
+            Button("我已知晓", role: .destructive) {
                 let state = UsernameValidator.shared.set(username: usernameTextFieldText, context: context)
                 switch state {
                 case .valid(let userInfo):
@@ -149,11 +149,11 @@ struct SettingsView: View {
                     setUsernameTextFieldToStoredValue()
                 }
             }
-            Button("Cancel", role: .cancel) {
+            Button("算了", role: .cancel) {
                 setUsernameTextFieldToStoredValue()
             }
         } message: {
-            Text("Changing your username will reset dIM Chat and remove your contacts. Do this carefully.")
+            Text("更改用户名将重置Ciallo聊天记录并删除您的所有联系人，小心！")
         }
     }
     
@@ -171,7 +171,7 @@ struct SettingsView: View {
         do {
             try context.save()
         } catch {
-            print("Context could not be saved after deleting all conversations")
+            print("删除所有对话后无法保存上下文。")
         }
     }
 }

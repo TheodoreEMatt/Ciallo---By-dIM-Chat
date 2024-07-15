@@ -45,15 +45,15 @@ struct AboutView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
-                FeatureCell(image: Image("appiconsvg"), title: "About dIM", subtitle: "dIM is an open-source decentralized chat app based on Bluetooth.")
-                FeatureCell(image: Image(systemName: "network"), title: "Peer-to-peer network", subtitle: "When you send a message to someone, it will go through a peer-to-peer Bluetooth network made up of other dIM users.")
-                FeatureCell(image: Image(systemName: "chevron.left.forwardslash.chevron.right"), title: "Open-Source", subtitle: "The source code of dIM is publicly available. This allow developers to verify and improve dIM to be the best and most secure decentralized messenger available. You can [view the Github repository here](https://github.com/KaffeDiem/dIM).")
-                FeatureCell(image: Image(systemName: "lock.circle"), title: "Encrypted and private", subtitle: "Messages are encrypted so that only you and the receiver can read them, protecting you from prying eyes.")
-                FeatureCell(image: Image(systemName: "bubble.left.and.bubble.right"), title: "Feedback is welcome", subtitle: "You can reach out to us by sending us an email or [visiting our website](https://www.dimchat.org).")
+                FeatureCell(image: Image("appiconsvg"), title: "关于切络", subtitle: "Ciallo是一个基于dIM开源项目以及蓝牙设备的开源且去中心化的即时聊天软件。连接世界，连接你我。")
+                FeatureCell(image: Image(systemName: "network"), title: "端对端通讯", subtitle: "在您发送信息时，会由Ciallo组建的端对端网络进行传输，因此你无需担心信息安全。")
+                FeatureCell(image: Image(systemName: "chevron.left.forwardslash.chevron.right"), title: "开放源代码", subtitle: "CialloChat和的父项目dIM的源代码都是公开的。两者共同遵循 GPL3.0许可证。这允许开发人员验证和改进dIM，使其成为最佳、最安全的去中心化即时聊天软件。您可以[在此处查看dIM的Github存储库](https://github.com/KaffeDiem/dIM)。")
+                FeatureCell(image: Image(systemName: "lock.circle"), title: "加密性和隐私性", subtitle: "消息经过加密，只有您和接收者才能阅读，保护您免受无形的大手窥探。")
+                FeatureCell(image: Image(systemName: "bubble.left.and.bubble.right"), title: "我们欢迎提交建议", subtitle: "你可以通过邮件或 [访问dIM项目的官方网站](https://www.dimchat.org).")
                     .padding(.bottom, 20)
                 
                 Button {
-                    if !EmailHelper.shared.sendEmail(subject: "dIM Support or Feedback", body: "", to: "support@dimchat.org") {
+                    if !EmailHelper.shared.sendEmail(subject: "dIM Support or Feedback", body: "", to: "ma7836194@gmail.com") {
                         emailHelperAlertIsShown = true
                     }
                 } label: {
@@ -70,12 +70,12 @@ struct AboutView: View {
             }
         }
         .padding(20)
-        .navigationTitle("Decentralized Instant Messenger")
+        .navigationTitle("关于Ciallo&dIM")
         .navigationBarTitleDisplayMode(.inline)
-        .alert("No default mail set", isPresented: $emailHelperAlertIsShown) {
-            Button("OK", role: .cancel) { () }
+        .alert("没有找到默认邮箱", isPresented: $emailHelperAlertIsShown) {
+            Button("了解", role: .cancel) { () }
         } message: {
-            Text("Set a default mailbox to send an email or use your favorite mail provider and contact us at support@dimchat.org")
+            Text("请设置您的默认邮箱再向我们发送邮件。")
         }
     }
 }

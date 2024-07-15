@@ -42,7 +42,7 @@ struct QRView: View {
             
             Spacer()
             
-            Text("Scan the QR code")
+            Text("扫描二维码\nScan the QR Code")
                 .font(.title)
                 .padding()
             
@@ -65,14 +65,14 @@ struct QRView: View {
                 
             Spacer(minLength: 150)
             
-            Text("Press the scan button and scan each others QR code. You must add each other.")
+            Text("按下扫描按钮，扫描对方的二维码。\n注意，你们之间需要相互添加。")
                 .font(.footnote)
                 .foregroundColor(.accentColor)
             
             Button {
                 qrCodeScannerIsShown = true
             } label: {
-                Text("Scan")
+                Text("*点击此处扫描*")
                     .padding()
                     .foregroundColor(.white)
                     .frame(minWidth: 0, maxWidth: .infinity)
@@ -117,7 +117,7 @@ struct QRView: View {
                 .resizable(resizingMode: .tile)
                 .edgesIgnoringSafeArea(.all)
         )
-        .navigationBarTitle("Add Contact", displayMode: .inline)
+        .navigationBarTitle("添加联系人", displayMode: .inline)
     }
     
     /// Handles the result of the QR scan.

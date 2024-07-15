@@ -89,7 +89,7 @@ struct HomeView: View {
         .toolbar {
             ToolbarItem(placement: .principal) {
                 VStack {
-                    Text("Chats")
+                    Text("消息")
                         .font(.headline)
                     if appSession.connectedDevicesAmount < 1 {
                         HStack {
@@ -97,7 +97,7 @@ struct HomeView: View {
                                 .imageScale(.small)
                                 .symbolRenderingMode(.palette)
                                 .foregroundStyle(.red, .orange, .white)
-                            Text("Not connected")
+                            Text("No Connection 无连接")
                                 .foregroundColor(.accentColor)
                                 .font(.subheadline)
                         }
@@ -105,7 +105,7 @@ struct HomeView: View {
                         HStack {
                             Image(systemName: "antenna.radiowaves.left.and.right")
                                 .imageScale(.small)
-                            Text("\(appSession.connectedDevicesAmount) in range").font(.subheadline)
+                            Text("\(appSession.connectedDevicesAmount) 用户在范围内").font(.subheadline)
                         }
                     }
                 }
