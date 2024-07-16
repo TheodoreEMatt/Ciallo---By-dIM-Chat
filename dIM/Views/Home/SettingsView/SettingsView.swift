@@ -4,7 +4,8 @@
 //
 //  Created by Kasper Munch on 25/08/2021.
 //
-
+// Original project by KaffeDiem
+// Modified by TheodoreEMatt to include Simplified Chinese translation and new icons
 import SwiftUI
 
 /// The main `SettingsView` which shows a number of subviews for different purposes.
