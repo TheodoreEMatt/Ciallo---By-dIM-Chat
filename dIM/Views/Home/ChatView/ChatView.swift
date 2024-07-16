@@ -4,6 +4,8 @@
 //
 //  Created by Kasper Munch on 23/08/2021.
 //
+// Original project by KaffeDiem
+// Modified by TheodoreEMatt to include Simplified Chinese translation and new icons
 import MobileCoreServices
 import Foundation
 import SwiftUI
