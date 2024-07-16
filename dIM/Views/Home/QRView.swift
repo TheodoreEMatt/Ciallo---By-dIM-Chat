@@ -4,7 +4,8 @@
 //
 //  Created by Kasper Munch on 29/08/2021.
 //
-
+// Original project by KaffeDiem
+// Modified by TheodoreEMatt to include Simplified Chinese translation and new icons
 import SwiftUI
 import CodeScanner
 import CoreImage.CIFilterBuiltins
