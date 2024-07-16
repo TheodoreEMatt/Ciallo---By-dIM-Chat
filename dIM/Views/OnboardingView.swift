@@ -4,6 +4,8 @@
 //
 //  Created by Kasper Munch on 23/12/2021.
 //
+// Original project by KaffeDiem
+// Modified by TheodoreEMatt to include Simplified Chinese translation and new icons
 
 import SwiftUI
 
@@ -26,7 +28,7 @@ struct OnboardingView: View {
                             }
                         }
                         VStack {
-                            Text("SEND OFFLINE MESSAGES")
+                            Text("离线下发送消息")
                                 .foregroundColor(.orange)
                                 .bold()
                                 .font(.largeTitle)
