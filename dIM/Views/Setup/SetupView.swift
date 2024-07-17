@@ -86,7 +86,7 @@ struct SetupView: View {
                         // EULA part.
                         HStack {
                             Text("若点击继续，则视为同意\nCiallo by dIM用户协议(EULA)")
-                            Link("EULA", destination: URL(string: "https://www.dimchat.org/eula")!)
+                            Link("链接", destination: URL(string: "https://www.dimchat.org/eula")!)
                         }
                         
                         // Enter button
@@ -94,9 +94,9 @@ struct SetupView: View {
                             UsernameValidator.shared.set(username: usernameTextField, context: context)
                             id = UUID() // Hack to force refresh view
                         } label: {
-                            Text("Continue")
+                            Text("继续")
                                 .padding()
-                                .foregroundColor(.white)
+                                .foregroundColor(.black)
                                 .frame(minWidth: 0, maxWidth: .infinity)
                                 .background(
                                     LinearGradient(

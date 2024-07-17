@@ -4,8 +4,7 @@
 //
 //  Created by Kasper Munch on 16/10/2021.
 //
-// Original project by KaffeDiem
-// Modified by TheodoreEMatt to include Simplified Chinese translation and new icons
+
 import SwiftUI
 import Foundation
 import MessageUI

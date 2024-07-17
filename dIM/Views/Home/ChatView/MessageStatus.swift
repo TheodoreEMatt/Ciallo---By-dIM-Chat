@@ -4,8 +4,7 @@
 //
 //  Created by Kasper Munch on 23/09/2021.
 //
-// Original project by KaffeDiem
-// Modified by TheodoreEMatt to include Simplified Chinese translation and new icons
+
 import SwiftUI
 
 /// The small status image of a message. An eye for example means that the

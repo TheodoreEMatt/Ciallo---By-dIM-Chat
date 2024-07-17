@@ -6,6 +6,7 @@
 //
 // Original project by KaffeDiem
 // Modified by TheodoreEMatt to include Simplified Chinese translation and new icons
+
 import SwiftUI
 
 /// A snapping carousel view used for the onboarding experience for dIM.
