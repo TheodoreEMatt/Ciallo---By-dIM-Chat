@@ -96,7 +96,7 @@ struct SetupView: View {
                         } label: {
                             Text("继续")
                                 .padding()
-                                .foregroundColor(.black)
+                                .foregroundColor(.blue)
                                 .frame(minWidth: 0, maxWidth: .infinity)
                                 .background(
                                     LinearGradient(

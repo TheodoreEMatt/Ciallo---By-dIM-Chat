@@ -76,7 +76,7 @@ struct QRView: View {
             } label: {
                 Text("*点击此处扫描*")
                     .padding()
-                    .foregroundColor(.white)
+                    .foregroundColor(.blue)
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .background(
                         LinearGradient(
@@ -103,10 +103,10 @@ struct QRView: View {
 
                         }
                         Spacer()
-                        Text("Add a new contact by scanning their QR code.")
+                        Text("通过扫描他们的二维码添加新联系人。")
                             .multilineTextAlignment(.center)
                             .font(.footnote)
-                            .foregroundColor(.white)
+                            .foregroundColor(.pink)
                             .padding()
                     }
                 }
